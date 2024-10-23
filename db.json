@@ -1,3 +1,74 @@
 {
-    "user":[]
+  "user": [
+    {
+      "id": "abc6f2cd-dba9-4370-bca5-5bfb49c92554",
+      "name": "bedirhan",
+      "email": "evrenkbedirhan@gmail.com",
+      "pasword": "2334",
+      "image": {}
+    },
+    {
+      "id": "94b20e73-8650-4e9c-9a65-cf7f6f969b19",
+      "name": "mehmet",
+      "email": "m@gmail.com",
+      "pasword": "2123445",
+      "image": {}
+    },
+    {
+      "id": "ef1c4f85-7af4-4184-8410-b2fcdbf93b67",
+      "name": "sfsdfd",
+      "email": "evrenkbedirhan@gmail.com",
+      "pasword": "dsff",
+      "image": {}
+    },
+    {
+      "id": "7da88f72-d01e-460a-ab0a-58997525c7d2",
+      "name": "fgbfv",
+      "email": "evrenkbedirhan@gmail.com",
+      "pasword": "bvb",
+      "image": {}
+    },
+    {
+      "id": "2d95ff5e-0515-416e-84a4-2d6ca227b7a6",
+      "name": "fdgvfd",
+      "email": "m@gmail.com",
+      "pasword": "dfg",
+      "image": {}
+    },
+    {
+      "id": "7e57b8ab-2a07-46de-8f4c-2a15b9d344bb",
+      "name": "bedirhan",
+      "email": "evrenkbedirhan@gmail.com",
+      "pasword": "sdff",
+      "image": {}
+    },
+    {
+      "id": "46cdcebb-aad7-477b-96fe-07279d6b101d",
+      "name": "dhgfh",
+      "email": "m@gmail.com",
+      "pasword": "sdfrfg",
+      "image": {}
+    },
+    {
+      "id": "d5fbce6d-5eb7-4c2f-8631-2ac7d5a315b4",
+      "name": "deneme",
+      "email": "evrenkbedirhan@gmail.com",
+      "pasword": "dff",
+      "image": {}
+    },
+    {
+      "id": "8aae76ce-c705-4ce3-ba68-9095831f6992",
+      "name": "deneme",
+      "email": "evrenkbedirhan@gmail.com",
+      "pasword": "fd",
+      "image": {}
+    },
+    {
+      "id": "e0f69ecb-20dd-40fa-bb70-5ff51b830ab2",
+      "name": "deneme",
+      "email": "evrenkbedirhan@gmail.com",
+      "pasword": "fvg",
+      "image": {}
+    }
+  ]
 }

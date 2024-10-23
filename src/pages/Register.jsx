@@ -1,21 +1,19 @@
-import { Link ,useNavigate} from "react-router-dom";
+import { Link} from "react-router-dom";
 import InputArea from "../components/Header/InputArea";
-import { saveToLocale, validate } from "../utils/helper";
+import {  validate } from "../utils/helper";
 import { toast } from "react-toastify";
 import { v4 } from "uuid";
-import { useState } from "react";
-import axios from "axios";
+import { useContext } from "react";
+import { UserContext } from "../context/UserContext";
 
 
-axios.defaults.baseURL='http://localhost:3060'
 
 const Register = () => {
+  const { uploadUser } = useContext(UserContext);
 
-  const [img, setImg] = useState();
-  const navigate = useNavigate();
 
   // form gönderilme olayı
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
 
     // form verisi oluşturma
@@ -48,34 +46,26 @@ const Register = () => {
   const imageToString = async(file) => {
     // dosya tipini dogrulama
     if (file.type === "image/jpeg" || file.type === "image/png") {
-      const reader = new FileReader();
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
 
-      reader.readAsDataURL(file);
-      reader.onload = () => {
-        setImg(reader.result);
-      };
-      return img;
+        reader.readAsDataURL(file);
+
+        reader.onload = () => {
+          resolve(reader.result);
+        };
+        reader.onerror = () => {
+          toast("resmi yüklemede hata oluştu")
+          reject(null);
+        };
+      });
     } else {
       toast("Lütfen gecerli bir dosya tipi giriniz:jpg/png");
       return null;
     }
   };
 
-  // kullanıcıyı veritabanına ekler
-  const uploadUser = (user) => {
-    axios
-      .post('/users', user)
-      .then(() => {
-        // kullanıcının id sinin local storage ekle
-        saveToLocale("token", user.id)
-        
-
-        // anasayfaya yönlendir
-        navigate("/home");
-        toast.success("Kayıt başarılı", { autoClose: 2000 });
-      })
-        .catch((err)=>console.log(err))
-  }
+ 
 
   return (
     <section className="bg-gray-900">
